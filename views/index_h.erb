@@ -2,5 +2,8 @@
 <% @houses.each do |house|%>
   <p>Name: <%= house.name %></p>
   <p>Logo: <img src="<%= house.logo %>"></p>
+  <form method="post" action="/houses/<%= house.id %>/delete">
+    <input type="submit" value="Delete House">
+  </form>
   <hr>
   <% end %>
